@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costuras David</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <h3>Ping Admin</h3>
+                <ul>
+                    <% admin.forEach(admin=> { %>
+                        <li>
+                            <%= admin.data %>
+                        </li>
+                        <% }) %>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <form action="/guardar" method="POST">
+                    <h3>Crear Usuario</h3>
+
+                    <label for="dni">Dni:</label>
+                    <input type="text" id="dni" name="dni"><br><br>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br><br>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido"><br><br>
+
+                    <button type="submit">Guardar</button><br><br>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
