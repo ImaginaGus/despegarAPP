@@ -4,11 +4,11 @@ if(process.env.NODE_ENV != 'production'){
 }
 
 const pool = mysql.createPool({
-    host: process.env.HOST || 'localhost', //cd_mysql_docker
-    user: process.env.ROOT || 'root',
-    password: process.env.PASSWORD ||'', //123456
-    database: process.env.NAME ||'',
-    port: process.env.PORT||3306,//3306
+    host: process.env.HOST_DB || 'localhost', //cd_mysql_docker
+    user: process.env.ROOT_DB || 'root',
+    password: process.env.PASSWORD_DB ||'', //123456
+    database: process.env.NAME_DB ||'',
+    port: process.env.PORT_DB||3306,//3306
     // waitForConnections: true,
     // connectionLimit: 10,
     // queueLimit: 0
